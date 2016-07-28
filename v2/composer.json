@@ -1,0 +1,5 @@
+{
+    "require" : {
+        "patrickkunka/mixitup":"dev-master"
+    }
+}

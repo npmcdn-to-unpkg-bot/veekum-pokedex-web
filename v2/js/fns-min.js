@@ -1,0 +1,1 @@
+function initBtnTarjeta(){var t=$(".btn-mostrar");t.length&&t.on("click",function(t){t.preventDefault();var n=$(t.currentTarget),a=n.find("span");n.parents(".tarjeta-contenido").toggleClass("visible"),a.toggleClass("fa-rotate-180")})}$(function(){initBtnTarjeta()});
