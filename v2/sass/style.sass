@@ -1,0 +1,103 @@
+@import mixins
+@import variables
+@import themes
+
+body
+    font-family: 'Roboto', 'Helvetica', sans-serif
+    color: $dark
+h1,h2,h3,h4,h5,h6
+    font-weight: 300
+.container-fluid
+    margin-top: em(50)
+.tarjeta
+    position: relative
+    margin: 0 0 em(15) 0
+    height: em(300)
+    max-height: em(300)
+    overflow: hidden
+    border-top: 1px solid rgba(0,0,0,0.1)
+    border-right: 1px solid rgba(0,0,0,0.1)
+    border-left: 1px solid rgba(0,0,0,0.1)
+    border-bottom:
+        width: em(5)
+        style: solid
+.tarjeta-figure
+    position: relative
+    width: 100%
+    height: em(215)
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    overflow: hidden
+    & img
+        display: block
+        max-height: 100%
+        margin: 0 auto
+    & figcaption
+        position: absolute
+        top: 0
+        left: 0
+        padding: em(4) em(8)
+        font-size: em(18)
+        font-weight: 500
+.tarjeta-contenido
+    position: absolute
+    top: em(215)
+    height: em(300)
+    transition: top 0.3s cubic-bezier(0.4, 0.0, 0.6, 1)
+    & .tarjeta-titulo
+        position: relative
+        height: em(80)
+    & h1
+        margin: 0
+        padding-left: em(10)
+        font-size: em(30)
+        line-height: 2.7
+        & small
+            color: #999
+            display: inline-block
+            width: em(10)
+            height: em(10)
+            text-indent: em(-900)
+            &:before
+                content: " | "
+    & .btn
+        position: absolute
+        top: em(-17)
+        right: em(10)
+        border-radius: 25px
+        transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)
+    & .tarjeta-stats
+        padding: em(10) 0
+    & .tarjeta-stat
+        width: 50%
+        padding: em(4) em(16)
+        &.pull-left
+            border-right: 1px solid transparentize($white, 0.5)
+        &.block
+            width: 100%
+            text-align: center
+            & h2
+                display: block
+                font-weight: 500
+                font-size: em(45)
+        & small
+            display: inline-block
+            margin: 0 em(10)
+            font-size: em(12)
+            color: $light
+        & h2
+            display: inline
+            margin: 0
+            font-size: em(30)
+            font-weight: 300
+
+.tarjeta-contenido.visible
+    width: 100%
+    top: 0
+    & .tarjeta-titulo
+        border-bottom: 1px solid transparentize($white, 0.5)
+    & .btn
+        top: em(20)
+
+@media (min-width: $sm)
+@media (min-width: $md)
+@media (min-width: $lg)
