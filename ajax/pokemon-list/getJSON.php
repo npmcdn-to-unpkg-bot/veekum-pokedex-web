@@ -48,7 +48,7 @@ switch (strtoupper($opcion)) {
                 //get Stats
                 $sql="  SELECT 
                             S.`id` AS id,
-                            SN.`name` AS name,
+                            CASE SN.`name` WHEN 'Special Attack' THEN 'Sp. Atk' WHEN 'Special Defense' THEN 'Sp. Def' ELSE SN.`name` END AS name,
                             PS.`base_stat` AS base_stat
                         FROM pokedex.pokemon_stats AS PS 
                             LEFT JOIN pokedex.stats AS S ON PS.stat_id = S.id
