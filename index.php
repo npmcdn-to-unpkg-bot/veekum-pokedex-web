@@ -1,57 +1,35 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokestats</title>
+  </head>
+  <body>
+    
+    <section class="container-fluid">
+      
+      <main class="row poke-contenedor">
+        
+      </main>
 
-//initilize the page
-require_once("inc/init.php");
+    </section>
 
-//require UI configuration (nav, ribbon, etc.)
-require_once("inc/config.ui.php");
-
-/*---------------- PHP Custom Scripts ---------
-
-YOU CAN SET CONFIGURATION VARIABLES HERE BEFORE IT GOES TO NAV, RIBBON, ETC. */
-
-
-
-/* ---------------- END PHP Custom Scripts ------------- */
-
-//include header
-//you can add your custom css in $page_css array.
-//Note: all css files are inside css/ folder
-$page_css[] = "your_style.css";
-include("inc/header.php");
-
-//include left panel (navigation)
-//follow the tree in inc/config.ui.php
-include("inc/nav.php");
-
-?>
-<!-- ==========================CONTENT STARTS HERE ========================== -->
-<!-- MAIN PANEL -->
-<div id="main" role="main">
-	<?php
-		include("inc/ribbon.php");
-	?>
-
-	<!-- MAIN CONTENT -->
-	<div id="content">
-
-	</div>
-	<!-- END MAIN CONTENT -->
-	
-</div>
-<!-- END MAIN PANEL -->
-
-<!-- FOOTER -->
-	<?php
-		include("inc/footer.php");
-	?>
-<!-- END FOOTER -->
-
-<!-- ==========================CONTENT ENDS HERE ========================== -->
-
-<?php 
-	//include required scripts
-	include("inc/scripts.php"); 
-	//include footer
-	include("inc/google-analytics.php"); 
-?>
+    <!-- CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/d0bd13eb63.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/fns-min.js"></script>
+  </body>
+</html>

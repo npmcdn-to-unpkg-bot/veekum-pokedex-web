@@ -2,7 +2,7 @@
 set_time_limit(45);
 
 function connect(){
-  $conn = mysqli_connect("localhost", "root", "", "pokedex");
+  $conn = mysqli_connect("localhost", "root", "qwerty123", "pokedex");
   if( $conn ) {
     return $conn;
   }else{
