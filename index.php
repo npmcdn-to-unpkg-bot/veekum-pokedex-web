@@ -9,8 +9,13 @@
   <body>
     
     <section class="container-fluid">
-      
-      <main class="row poke-contenedor">
+      <div class="button-group filters-button-group">
+        <button class="button is-checked" data-filter="*">show all</button>
+        <button class="button" data-filter=".water">water</button>
+        <button class="button" data-filter=".fire">fire</button>
+        <button class="button" data-filter=".grass">grass</button>
+      </div>
+      <main class="row grid poke-contenedor">
         
       </main>
 
@@ -28,6 +33,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/d0bd13eb63.js"></script>
+    <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
     
     <script src="js/main.js"></script>
     <script src="js/fns-min.js"></script>
