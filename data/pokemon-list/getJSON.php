@@ -6,17 +6,17 @@ $json = null;
 
 //LANGUAGE ID
 //ja-JP 1
-//ja-JP 2 //roomaji
+//ja-JP 2 //roomaji //none
 //ko-KR 3
-//zh-CN 4
-//fr-FR 5
+//zh-CN 4 //none
+//fr-FR 5 
 //de-DE 6
 //es-ES 7
 //it-IT 8
 //en-US 9
 //cs-CZ 10
-//ja-JP 11 //ja-kanji
-$lang = 1;
+//ja-JP 11 //ja-kanji //none
+$lang = 9;
 
 switch (strtoupper($opcion)) {
     case "POKEMONLIST":

@@ -11,6 +11,7 @@ isotope();
 });
 
 function pokemonlist(){
+
     var content = "";
     var sumStats = 0;
     var url = "data/pokemon-list/getJSON.php?opcion=POKEMONLIST";
@@ -20,9 +21,18 @@ function pokemonlist(){
         dataType: "JSON",
         async: false,
         success: function(res) {
+            var max;
+            max = 0;
+
             $.each( res, function( key, value ) {
                 sumStats = 0;
-                content += '<article id="'+value.id+'" class="element-item '+value.types[0].name.toLowerCase()+' col-xs-6 col-sm-4 col-md-3 col-lg-2">';
+
+                if(value.types[1] !== undefined) {
+                    content += '<article id="'+value.id+'" class="element-item '+value.types[1].name.toLowerCase()+' '+value.types[0].name.toLowerCase()+' col-xs-12 col-sm-4 col-md-3 col-lg-2">';
+                }else{
+                    content += '<article id="'+value.id+'" class="element-item '+value.types[0].name.toLowerCase()+' col-xs-12 col-sm-4 col-md-3 col-lg-2">';
+                }
+
                 content += '    <div class="tarjeta tarjeta-'+value.types[0].name.toLowerCase()+'">';
                 content += '        <figure class="tarjeta-figure text-center">';
                 content += '            <img src="img/pokemon-small/'+pad(value.id, 3)+'.png" alt="Nombre">';
@@ -40,6 +50,10 @@ function pokemonlist(){
                 content += '             </section>';
                 content += '             <section class="tarjeta-stats clearfix text-center">';
                 $.each( value.stats, function( key, value ) {
+                    if(max < parseInt(value.base_stat)){
+                        max = value.base_stat;
+                    }
+
                     sumStats = sumStats + parseInt(value.base_stat);
                     if(key % 2 === 0){
                         content += '                <div class="tarjeta-stat pull-left text-right">';
@@ -60,6 +74,7 @@ function pokemonlist(){
                 content += '</article>';
             });
             $(".poke-contenedor").html(content);
+            console.log(max);
         }
     });
 }
