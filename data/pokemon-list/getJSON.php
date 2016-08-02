@@ -16,7 +16,7 @@ $json = null;
 //en-US 9
 //cs-CZ 10
 //ja-JP 11 //ja-kanji
-$lang = 9;
+$lang = 1;
 
 switch (strtoupper($opcion)) {
     case "POKEMONLIST":
@@ -29,7 +29,6 @@ switch (strtoupper($opcion)) {
                 ORDER BY P.`id`";
 
         $arr = sql2arr($sql);
-
         
         if($arr){
             foreach ($arr as $key => $value) {
@@ -58,7 +57,7 @@ switch (strtoupper($opcion)) {
                 $arr[$key]['stats'] = $arrStats;
 
             }
-            $json = json_encode(utf8ize($arr));
+            $json = json_encode($arr);
         }
 
     break;

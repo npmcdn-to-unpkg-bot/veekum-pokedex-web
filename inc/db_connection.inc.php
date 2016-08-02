@@ -4,6 +4,7 @@ set_time_limit(45);
 function connect(){
   $conn = mysqli_connect("localhost", "root", "qwerty123", "pokedex");
   if( $conn ) {
+    mysqli_set_charset($conn, "utf8");
     return $conn;
   }else{
       //sqlError($sql, $conn);
