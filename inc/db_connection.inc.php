@@ -20,7 +20,7 @@ function iniciaTransaction($conn){
   }
 }
 
-function query($sql){
+function queery($sql){
   $conn = connect();
   $result = mysqli_query($conn, $sql);
   if($result === false){
@@ -94,6 +94,12 @@ function executeQueryTrans($sql, $conn){
   }else{
     return true;
   }
+}
+  
+function numRows($sql) {
+  $result = mysqli_query($conn, $sql);
+  $rowcount = mysqli_num_rows($result);
+  return $rowcount; 
 }
 
 function sqlError($sql, $conn){

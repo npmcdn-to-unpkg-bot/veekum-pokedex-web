@@ -10,30 +10,30 @@
     
     <section class="container-fluid">
       <div class="button-group filters-button-group">
-        <button class="button is-checked" data-filter="*">show all</button>
-        <button class="button" data-filter=".water">water</button>
-        <button class="button" data-filter=".fire">fire</button>
-        <button class="button" data-filter=".grass">grass</button>
-        <button class="button" data-filter=".dragon">dragon</button>
-        <button class="button" data-filter=".normal">normal</button>
-        <button class="button" data-filter=".bug">bug</button>
-        <button class="button" data-filter=".ice">ice</button>
-        <button class="button" data-filter=".dark">dark</button>
-        <button class="button" data-filter=".flying">flying</button>
-        <button class="button" data-filter=".poison">poison</button>
-        <button class="button" data-filter=".fighting">fighting</button>
-        <button class="button" data-filter=".ground">ground</button>
-        <button class="button" data-filter=".rock">rock</button>
-        <button class="button" data-filter=".ghost">ghost</button>
-        <button class="button" data-filter=".steel">steel</button>
-        <button class="button" data-filter=".fairy">fairy</button>
-        <button class="button" data-filter=".psychic">psychic</button>
-        <button class="button" data-filter=".electric">electric</button>
+        <button class="btn btn-default button is-checked" data-filter="*">show all</button>
+        <button class="btn btn-default button" data-filter=".water">water</button>
+        <button class="btn btn-default button" data-filter=".fire">fire</button>
+        <button class="btn btn-default button" data-filter=".grass">grass</button>
+        <button class="btn btn-default button" data-filter=".dragon">dragon</button>
+        <button class="btn btn-default button" data-filter=".normal">normal</button>
+        <button class="btn btn-default button" data-filter=".bug">bug</button>
+        <button class="btn btn-default button" data-filter=".ice">ice</button>
+        <button class="btn btn-default button" data-filter=".dark">dark</button>
+        <button class="btn btn-default button" data-filter=".flying">flying</button>
+        <button class="btn btn-default button" data-filter=".poison">poison</button>
+        <button class="btn btn-default button" data-filter=".fighting">fighting</button>
+        <button class="btn btn-default button" data-filter=".ground">ground</button>
+        <button class="btn btn-default button" data-filter=".rock">rock</button>
+        <button class="btn btn-default button" data-filter=".ghost">ghost</button>
+        <button class="btn btn-default button" data-filter=".steel">steel</button>
+        <button class="btn btn-default button" data-filter=".fairy">fairy</button>
+        <button class="btn btn-default button" data-filter=".psychic">psychic</button>
+        <button class="btn btn-default button" data-filter=".electric">electric</button>
       </div>
       <main class="row grid poke-contenedor">
         
       </main>
-
+      <div id="loader-icon"><img src="LoaderIcon.gif" /><div>
     </section>
 
     <!-- CSS -->

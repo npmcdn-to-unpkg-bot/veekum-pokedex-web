@@ -1,7 +1,22 @@
 $(document).ready(function() {
+    
+    
 
-pokemonlist();
-isotope();
+    pokemonlist();
+    
+
+    $(window).scroll(function(){
+
+        if ($(window).scrollTop() == $(document).height() - $(window).height()){
+            if($(".pagenum:last").val() <= $(".total-page:last").val()) {
+                var rowcount = parseInt($(".total-page:last").val()) + 1;
+                var pagenum = parseInt($(".pagenum:last").val()) + 1;
+                pokemonlist(rowcount,pagenum);
+            }
+        }
+    }); 
+
+    isotope();
 /*
  $(".seePokemon").click(function() {
         alert(this.id);
@@ -10,21 +25,32 @@ isotope();
 
 });
 
-function pokemonlist(){
+
+
+function pokemonlist(rowcount,pagenum){
 
     var content = "";
     var sumStats = 0;
-    var url = "data/pokemon-list/getJSON.php?opcion=POKEMONLIST";
+    var url = "data/pokemon-list/getJSON.php";
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: url,
+        data:  {opcion:"POKEMONLIST", rowcount:rowcount, page:pagenum},
         dataType: "JSON",
-        async: false,
+        async: true,
+        beforeSend: function(){
+        $('#loader-icon').show();
+        },
+        complete: function(){
+        $('#loader-icon').hide();
+        },
         success: function(res) {
             var max;
             max = 0;
-
-            $.each( res, function( key, value ) {
+            var data = res.data;
+            var structure = res.structure;
+            content += '<input type="hidden" class="pagenum" value="'+structure.page+'" /><input type="hidden" class="total-page" value="'+structure.rowcount+'" />';
+            $.each( data, function( key, value ) {
                 sumStats = 0;
 
                 if(value.types[1] !== undefined) {
@@ -73,8 +99,7 @@ function pokemonlist(){
                 content += '    </div>';
                 content += '</article>';
             });
-            $(".poke-contenedor").html(content);
-            console.log(max);
+            $(".poke-contenedor").append(content);
         }
     });
 }
