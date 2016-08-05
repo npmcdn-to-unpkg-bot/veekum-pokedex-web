@@ -1,6 +1,7 @@
 @import mixins
 @import variables
 @import themes
+@import bootstrap-override
 
 body
     font-family: 'Roboto', 'Helvetica', sans-serif
@@ -15,12 +16,9 @@ h1,h2,h3,h4,h5,h6
     height: em(300)
     max-height: em(300)
     overflow: hidden
-    border-top: 1px solid rgba(0,0,0,0.1)
-    border-right: 1px solid rgba(0,0,0,0.1)
-    border-left: 1px solid rgba(0,0,0,0.1)
-    border-bottom:
-        width: em(5)
-        style: solid
+    border: 1px solid rgba(0,0,0,0.1)
+    &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,0.2)
 .tarjeta-figure
     position: relative
     width: 100%
@@ -38,11 +36,14 @@ h1,h2,h3,h4,h5,h6
         padding: em(4) em(8)
         font-size: em(18)
         font-weight: 500
+        background-color: $principal
+        color: $dark
 .tarjeta-contenido
     position: absolute
     top: em(215)
     height: em(300)
     transition: top 0.3s cubic-bezier(0.4, 0.0, 0.6, 1)
+    background-color: $white
     & .tarjeta-titulo
         position: relative
         height: em(80)
@@ -51,25 +52,38 @@ h1,h2,h3,h4,h5,h6
         padding-left: em(10)
         font-size: em(30)
         line-height: 2.7
-        & small
-            color: #999
+        & .type
+            position: relative
+            top: 24px
+            left: 0
             display: inline-block
-            width: em(10)
-            height: em(10)
+            width: em(14)
+            height: em(14)
             text-indent: em(-900)
-            &:before
-                content: " | "
-    & .btn
+            background-repeat: no-repeat
+            background-size: em(14)
+            background-position: 50%
+            border-radius: 20px
+    & .tarjeta-nav
         position: absolute
         top: em(-17)
         right: em(10)
-        border-radius: 25px
-        transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)
+        & .btn
+            display: inline-block
+            background-color: $principal
+            color: $dark    
+            border: 1px solid rgba(0,0,0,0.1)
+            border-radius: 25px
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)  
+            &:hover
+                background-color: $black
+                color: $light
+                border-color: darken($black, 10)  
     & .tarjeta-stats
         padding: em(10) 0
     & .tarjeta-stat
         width: 50%
-        padding: em(4) em(16)
+        padding: em(4) em(12)
         &.pull-left
             border-right: 1px solid transparentize($white, 0.5)
         &.block
@@ -82,8 +96,8 @@ h1,h2,h3,h4,h5,h6
         & small
             display: inline-block
             margin: 0 em(10)
-            font-size: em(12)
-            color: $light
+            font-size: em(10)
+            color: $dark
         & h2
             display: inline
             margin: 0
@@ -93,9 +107,11 @@ h1,h2,h3,h4,h5,h6
 .tarjeta-contenido.visible
     width: 100%
     top: 0
+    background-color: $principal
+    color: $dark 
     & .tarjeta-titulo
         border-bottom: 1px solid transparentize($white, 0.5)
-    & .btn
+    & .tarjeta-nav
         top: em(20)
 
 @media (min-width: $sm)

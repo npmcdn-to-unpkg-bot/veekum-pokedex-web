@@ -1,0 +1,56 @@
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Iconos #
+######################
+Icon
+
+# Thumbnails #
+######################
+._*
+
+# Root Files #
+######################
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Composer #
+######################
+composer.phar
+composer.json
+composer.lock
+vendor/
+
+# Code Kit #
+######################
+config.codekit
+
+# SASS #
+######################
+sass/.sass-cache
+
+# ASSETS #
+######################
+_assets/
+
+
