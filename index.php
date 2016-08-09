@@ -11,24 +11,24 @@
     <section class="container-fluid">
       <div class="button-group filters-button-group">
         <button class="btn btn-default button is-checked" data-filter="*">show all</button>
-        <button class="btn btn-default button" data-filter=".water">water</button>
-        <button class="btn btn-default button" data-filter=".fire">fire</button>
-        <button class="btn btn-default button" data-filter=".grass">grass</button>
-        <button class="btn btn-default button" data-filter=".dragon">dragon</button>
-        <button class="btn btn-default button" data-filter=".normal">normal</button>
-        <button class="btn btn-default button" data-filter=".bug">bug</button>
-        <button class="btn btn-default button" data-filter=".ice">ice</button>
-        <button class="btn btn-default button" data-filter=".dark">dark</button>
-        <button class="btn btn-default button" data-filter=".flying">flying</button>
-        <button class="btn btn-default button" data-filter=".poison">poison</button>
-        <button class="btn btn-default button" data-filter=".fighting">fighting</button>
-        <button class="btn btn-default button" data-filter=".ground">ground</button>
-        <button class="btn btn-default button" data-filter=".rock">rock</button>
-        <button class="btn btn-default button" data-filter=".ghost">ghost</button>
-        <button class="btn btn-default button" data-filter=".steel">steel</button>
-        <button class="btn btn-default button" data-filter=".fairy">fairy</button>
-        <button class="btn btn-default button" data-filter=".psychic">psychic</button>
-        <button class="btn btn-default button" data-filter=".electric">electric</button>
+        <button class="btn btn-default button" data-filter=".type11">water</button>
+        <button class="btn btn-default button" data-filter=".type10">fire</button>
+        <button class="btn btn-default button" data-filter=".type12">grass</button>
+        <button class="btn btn-default button" data-filter=".type16">dragon</button>
+        <button class="btn btn-default button" data-filter=".type1">normal</button>
+        <button class="btn btn-default button" data-filter=".type7">bug</button>
+        <button class="btn btn-default button" data-filter=".type15">ice</button>
+        <button class="btn btn-default button" data-filter=".type17">dark</button>
+        <button class="btn btn-default button" data-filter=".type3">flying</button>
+        <button class="btn btn-default button" data-filter=".type4">poison</button>
+        <button class="btn btn-default button" data-filter=".type2">fighting</button>
+        <button class="btn btn-default button" data-filter=".type5">ground</button>
+        <button class="btn btn-default button" data-filter=".type6">rock</button>
+        <button class="btn btn-default button" data-filter=".type8">ghost</button>
+        <button class="btn btn-default button" data-filter=".type9">steel</button>
+        <button class="btn btn-default button" data-filter=".type18">fairy</button>
+        <button class="btn btn-default button" data-filter=".type14">psychic</button>
+        <button class="btn btn-default button" data-filter=".type13">electric</button>
       </div>
       <main class="row grid poke-contenedor">
         
