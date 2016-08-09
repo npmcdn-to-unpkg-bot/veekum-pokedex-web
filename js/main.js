@@ -54,22 +54,27 @@ function pokemonlist(rowcount,pagenum){
                 sumStats = 0;
 
                 if(value.types[1] !== undefined) {
-                    content += '<article id="'+value.id+'" class="element-item '+value.types[1].name.toLowerCase()+' '+value.types[0].name.toLowerCase()+' col-xs-12 col-sm-4 col-md-3 col-lg-2">';
+                    content += '<article id="'+value.id+'" class="element-item type'+value.types[1].id+' type'+value.types[0].id+' col-xs-12 col-sm-6 col-md-4 col-lg-3">';
                 }else{
-                    content += '<article id="'+value.id+'" class="element-item '+value.types[0].name.toLowerCase()+' col-xs-12 col-sm-4 col-md-3 col-lg-2">';
+                    content += '<article id="'+value.id+'" class="element-item type'+value.types[0].id+' col-xs-12 col-sm-6 col-md-4 col-lg-3">';
                 }
 
-                content += '    <div class="tarjeta tarjeta-'+value.types[0].name.toLowerCase()+'">';
+                content += '    <div class="tarjeta tarjeta-type'+value.types[0].id+'">';
                 content += '        <figure class="tarjeta-figure text-center">';
                 content += '            <img src="img/pokemon-small/'+pad(value.id, 3)+'.png" alt="Nombre">';
                 content += '            <figcaption>#'+pad(value.id, 3)+'</figcaption>';
                 content += '        </figure>';
                 content += '        <div class="tarjeta-contenido">';
                 content += '            <section class="tarjeta-titulo">';
-                content += '                <a href="#" class="btn pull-right btn-mostrar"><span class="fa fa-angle-up"></span></a>';
+                content += '                <nav class="tarjeta-nav">';
+                content += '                    <a href="#" class="btn btn-mostrar"><span class="fa fa-angle-up"></span></a>';
+                content += '                    <a href="detalle.html?pid=1" class="btn"><span class="fa fa-angle-double-right"></span></a>';
+                content += '                </nav>';
+
+                
                 content += '                <h1>'+value.name+'';
                 $.each( value.types, function( key, value ) {
-                    content += '                    <small class="txt-'+value["name"].toLowerCase()+'">'+value["name"]+'</small>';
+                    content += '                    <span class="type type'+value["id"]+'" data-toggle="tooltip" data-placement="top" title="'+value["name"]+'">'+value["name"]+'</span> ';
                     
                 });
                 content += '                </h1>';
