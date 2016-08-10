@@ -16,7 +16,12 @@ h1,h2,h3,h4,h5,h6
     height: em(300)
     max-height: em(300)
     overflow: hidden
-    border: 1px solid rgba(0,0,0,0.1)
+    border-top: 1px solid lighten($black, 90)
+    border-right: 1px solid lighten($black, 90)
+    border-left: 1px solid lighten($black, 90)
+    border-bottom-width: 6px
+    border-bottom-style: solid
+    border-bottom-color: lighten($black, 90) // Definido desde JavaScript
     &:hover
         box-shadow: 0 0 10px rgba(0,0,0,0.2)
 .tarjeta-figure
