@@ -1,3 +1,4 @@
+/*global console:true */
 /************************************
 * Coleres de la tarjeta, se recuperan los colores declarados en el data-palette y a partir de ellos se definen los colores de la tarjeta
 ************************************/
@@ -18,8 +19,6 @@ function initColoresTarjeta(c){
         $(this).find("figcaption").css('background-color', color);
         
         colorNum = parseInt( color.getHex().replace("#", ""), 16 );
-        console.log( colorNum );
-        console.log(16777215 / 2 );
         if (colorNum > (16777215 / 2)){
             colorTexto = "#565656";
         } else {
@@ -36,7 +35,7 @@ function initBtnTarjeta(){
     var contenedor = $(".poke-contenedor");
     if( contenedor.length ){
         contenedor.on("click", function(e){
-            e.preventDefault();
+            console.log("hola");
             event.stopImmediatePropagation();
             var target = $(e.target),
                 boton = target;
@@ -44,8 +43,11 @@ function initBtnTarjeta(){
                 boton = target.parent();
             }
             if( boton.hasClass("btn-mostrar") ){
+                e.preventDefault();
                 boton.parents(".tarjeta-contenido").toggleClass("visible");
                 boton.find("span").toggleClass("fa-rotate-180");
+            } else {
+                console.log( boton.attr("href") );
             }
         });
     }
