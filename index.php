@@ -48,7 +48,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/d0bd13eb63.js"></script>
-    <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
     
     <script src="js/main.js"></script>
     <script src="js/fns-min.js"></script>
